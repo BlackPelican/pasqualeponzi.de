@@ -51,8 +51,8 @@ export default {
 }
 
 .column__img {
-  width: 95%;
-  margin-bottom: 5%;
+  width: 97%;
+  margin-bottom: 3%;
   box-shadow: 0 4px 7px #33333322;
   user-select: none;
   cursor: pointer;

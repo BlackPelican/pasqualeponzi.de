@@ -2,7 +2,7 @@
   <nav class="the-nav">
     <img src="img/logo.png" alt="Logo" class="logo" />
     <ul class="the-nav__list">
-      <li class="the-nav__link" @click="showGallery">Gallerie</li>
+      <li class="the-nav__link" @click="showGallery">Galerie</li>
       <li class="the-nav__link">About</li>
       <li class="the-nav__link" @click="showContact">Kontakt</li>
     </ul>
@@ -20,11 +20,11 @@ export default {
   },
   methods: {
     showGallery() {
-      this.$store.commit("setShowContact", false);
+      this.$store.commit("hideAll");
       this.$store.commit("setShowGallery", true);
     },
     showContact() {
-      this.$store.commit("setShowGallery", false);
+      this.$store.commit("hideAll");
       this.$store.commit("setShowContact", true);
     }
   }

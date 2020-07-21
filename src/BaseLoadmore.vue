@@ -24,7 +24,7 @@
         </g>
       </g>
     </svg>
-    <span class="base-loadmore__text">Load More</span>
+    <span class="base-loadmore__text">Mehr laden</span>
   </button>
 </template>
 

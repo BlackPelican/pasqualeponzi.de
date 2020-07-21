@@ -1,7 +1,7 @@
 <template>
   <footer class="the-footer">
     <span class="note">Lorem Ipsum 2020</span>
-    <span class="impressum">Impressum</span>
+    <span class="impressum" @click="showImprint">Impressum</span>
   </footer>
 </template>
 
@@ -13,6 +13,12 @@ export default {
   components: {},
   data: function() {
     return {};
+  },
+  methods: {
+    showImprint() {
+      this.$store.commit("hideAll");
+      this.$store.commit("setShowImprint", true);
+    }
   }
 };
 </script>

@@ -4,6 +4,7 @@
     <TheGallery v-if="$store.state.showGallery" />
     <TheOverlay v-if="$store.state.showOverlay" :img="$store.state.currImg" />
     <TheContact v-if="$store.state.showContact" />
+    <TheImprint v-if="$store.state.showImprint" />
     <TheFooter />
   </div>
 </template>
@@ -14,6 +15,7 @@ import TheGallery from "./TheGallery.vue";
 import TheOverlay from "./TheOverlay.vue";
 import TheFooter from "./TheFooter.vue";
 import TheContact from "./TheContact.vue";
+import TheImprint from "./TheImprint.vue";
 
 export default {
   name: "App",
@@ -22,7 +24,8 @@ export default {
     TheOverlay,
     TheNav,
     TheFooter,
-    TheContact
+    TheContact,
+    TheImprint
   },
   methods: {
     windowResize() {
@@ -57,6 +60,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Open Sans";
+  scroll-behavior: smooth;
 }
 
 #app {

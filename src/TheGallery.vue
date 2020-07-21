@@ -9,18 +9,21 @@
       />
     </div>
     <BaseLoadmore />
+    <TheTotop />
   </main>
 </template>
 
 <script>
 import GalleryColumn from "./GalleryColumn.vue";
 import BaseLoadmore from "./BaseLoadmore.vue";
+import TheTotop from "./TheTotop.vue";
 
 export default {
   name: "TheGallery",
   components: {
     GalleryColumn,
-    BaseLoadmore
+    BaseLoadmore,
+    TheTotop
   },
   data: function() {
     return {};
@@ -33,7 +36,7 @@ export default {
       const imgs = [];
 
       for (let i = 1; i <= this.$store.state.galleryImgsMax; i++) {
-        imgs.push(`img/a-minified/${i}.jpg`);
+        imgs.push(`img/minified/${i}.jpg`);
       }
 
       return imgs;
