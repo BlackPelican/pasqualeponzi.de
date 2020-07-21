@@ -7,7 +7,7 @@
       <br />Herderstraße 2
       <br />64285 Darmstadt
       <br />Telefon: auf Anfrage
-      <br />E-Mail: max@muster.de
+      <br />E-Mail: pasqualeponzi@gmx.de
     </p>
   </div>
 </template>
@@ -33,14 +33,19 @@ export default {
   width: 100%;
   min-height: 100vh;
   padding: 0 4vmin;
+  color: var(--black);
 }
 
 .imprint__title {
   margin-bottom: 4vmin;
+  font-size: 34px;
+  letter-spacing: 0.25px;
 }
 
 .imprint__text {
   text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.15px;
   line-height: 1.5;
 }
 </style>

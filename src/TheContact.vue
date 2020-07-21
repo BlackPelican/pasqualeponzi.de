@@ -1,6 +1,15 @@
 <template>
   <section class="the-contact">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, accusamus voluptatibus rerum modi eos vel nulla harum delectus aperiam quasi sit perspiciatis autem nisi, quaerat architecto labore non, exercitationem illo!</p>
+    <div class="contact__line">
+      <p class="contact__text">
+        <span class="contact__title">E-Mail:</span> pasqualeponzi@gmx.de
+      </p>
+    </div>
+    <div class="contact__line">
+      <p class="contact__text">
+        <span class="contact__title">Telefon:</span> +06 1234 9876543
+      </p>
+    </div>
   </section>
 </template>
 
@@ -24,10 +33,17 @@ export default {
   width: 100%;
   min-height: 100vh;
   padding: 0 4vmin;
+  flex-direction: column;
+  color: var(--black);
 }
 
-p {
-  max-width: 70ch;
+.contact__line {
   text-align: center;
+  line-height: 1.6;
+  font-size: 24px;
+}
+
+.contact__title {
+  font-weight: 600;
 }
 </style>
