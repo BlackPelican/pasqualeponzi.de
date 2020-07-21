@@ -28,7 +28,8 @@ export default {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0.5em 4vmin;
+  padding: 0 4vmin;
+  height: 2rem;
   border-bottom: 4px solid var(--primary);
 }
 

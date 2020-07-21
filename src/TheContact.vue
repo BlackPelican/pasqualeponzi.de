@@ -31,7 +31,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 7rem);
   padding: 0 4vmin;
   flex-direction: column;
   color: var(--black);

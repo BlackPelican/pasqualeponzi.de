@@ -31,7 +31,7 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 7rem);
   padding: 0 4vmin;
   color: var(--black);
 }
