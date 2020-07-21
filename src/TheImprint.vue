@@ -6,7 +6,7 @@
       <br />Pasqualino Ponzi
       <br />Herderstraße 2
       <br />64285 Darmstadt
-      <br />Telefon: auf Anfrage
+      <br />Telefon: 0176 725 061 47
       <br />E-Mail: pasqualeponzi@gmx.de
     </p>
   </div>

@@ -7,7 +7,7 @@
     </div>
     <div class="contact__line">
       <p class="contact__text">
-        <span class="contact__title">Telefon:</span> +06 1234 9876543
+        <span class="contact__title">Telefon:</span> 0176 725 061 47
       </p>
     </div>
   </section>

@@ -27,7 +27,7 @@ export default {
       const scrollCurr = window.pageYOffset;
 
       document.querySelector(".the-totop").style.bottom =
-        scrollPrev > scrollCurr && window.scrollY > 1200 ? "5vmin" : "-11vmin";
+        scrollPrev > scrollCurr && window.scrollY > 1200 ? "5vmin" : "-20vmin";
 
       scrollPrev = scrollCurr;
     };
@@ -42,7 +42,7 @@ export default {
   background: var(--background);
   position: fixed;
   right: 5vmin;
-  bottom: -11vmin;
+  bottom: -20vmin;
   border-radius: 50%;
   box-shadow: 0 4px 7px #33333322;
   display: flex;
