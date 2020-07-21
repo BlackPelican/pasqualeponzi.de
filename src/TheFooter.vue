@@ -1,6 +1,6 @@
 <template>
   <footer class="the-footer">
-    <span class="note">Made by Nico Ponzi</span>
+    <span class="note">Lorem Ipsum 2020</span>
     <span class="impressum">Impressum</span>
   </footer>
 </template>
@@ -24,8 +24,6 @@ export default {
   justify-content: flex-end;
   padding: 0.5em 4vmin;
   border-bottom: 4px solid var(--primary);
-  position: absolute;
-  bottom: 0;
 }
 
 .note {
