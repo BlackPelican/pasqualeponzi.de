@@ -1,6 +1,6 @@
 <template>
   <footer class="the-footer">
-    <span class="note">by Nico Ponzi</span>
+    <span class="note">© 2020 - Pasqualino Ponzi</span>
     <span class="impressum" @click="showImprint">Impressum</span>
   </footer>
 </template>

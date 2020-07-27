@@ -72,7 +72,7 @@ export default {
 }
 
 .base-loadmore:hover:not(.base-loadmore--disabled) {
-  background: #43aa8bcc;
+  background: #43aa8bdd;
 }
 
 .base-loadmore:active:not(.base-loadmore--disabled) {

@@ -1,6 +1,6 @@
 <template>
   <nav class="the-nav">
-    <img src="img/logo.png" alt="Logo" class="logo" />
+    <img src="img/logo-black.svg" alt="Logo" class="logo" />
     <ul class="the-nav__list">
       <li class="the-nav__link" @click="showGallery">Galerie</li>
       <li class="the-nav__link">About</li>
