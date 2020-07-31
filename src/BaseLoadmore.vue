@@ -110,6 +110,7 @@ export default {
 @media screen and (max-width: 600px) {
   .base-loadmore {
     font-size: 12px;
+    margin-bottom: 4em;
   }
 }
 </style>
