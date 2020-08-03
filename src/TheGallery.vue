@@ -23,9 +23,9 @@ export default {
   components: {
     GalleryColumn,
     BaseLoadmore,
-    TheTotop
+    TheTotop,
   },
-  data: function() {
+  data: function () {
     return {};
   },
   computed: {
@@ -36,12 +36,12 @@ export default {
       const imgs = [];
 
       for (let i = 1; i <= this.$store.state.galleryImgsMax; i++) {
-        imgs.push(`img/minified/${i}.jpg`);
+        imgs.push(`img/bilder/${i}.jpg`);
       }
 
       return imgs;
-    }
-  }
+    },
+  },
 };
 </script>
 

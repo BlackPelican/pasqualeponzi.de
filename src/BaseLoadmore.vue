@@ -34,7 +34,7 @@
 export default {
   name: "BaseLoadmore",
   components: {},
-  data: function() {
+  data: function () {
     return {};
   },
   computed: {
@@ -42,16 +42,16 @@ export default {
       return (
         this.$store.state.galleryImgsShow < this.$store.state.galleryImgsMax
       );
-    }
+    },
   },
   methods: {
     setGalleryImgsMax() {
       this.$store.commit(
         "setGalleryImgsShow",
-        (this.$store.state.galleryImgsShow += 24)
+        (this.$store.state.galleryImgsShow += this.$store.state.galleryImgsShow)
       );
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -64,7 +64,7 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 0.5em;
-  margin-bottom: 2em;
+  margin: 2em 0;
   box-shadow: 0 4px 7px #22222222;
   cursor: pointer;
   transition: all 200ms ease-in-out;

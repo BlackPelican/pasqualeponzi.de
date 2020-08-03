@@ -9,8 +9,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    galleryImgsMax: 100,
-    galleryImgsShow: 34,
+    galleryImgsMax: 345,
+    galleryImgsShow: 69,
     showOverlay: false,
     showGallery: true,
     showContact: false,
