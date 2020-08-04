@@ -2,7 +2,6 @@
   <div id="app">
     <TheNav />
     <TheGallery v-if="$store.state.showGallery" />
-    <TheOverlay v-if="$store.state.showOverlay" :img="$store.state.currImg" />
     <TheContact v-if="$store.state.showContact" />
     <TheImprint v-if="$store.state.showImprint" />
     <TheFooter />
@@ -12,7 +11,6 @@
 <script>
 import TheNav from "./TheNav.vue";
 import TheGallery from "./TheGallery.vue";
-import TheOverlay from "./TheOverlay.vue";
 import TheFooter from "./TheFooter.vue";
 import TheContact from "./TheContact.vue";
 import TheImprint from "./TheImprint.vue";
@@ -21,29 +19,28 @@ export default {
   name: "App",
   components: {
     TheGallery,
-    TheOverlay,
     TheNav,
     TheFooter,
     TheContact,
-    TheImprint
+    TheImprint,
   },
   methods: {
     windowResize() {
       this.$store.commit("setWindowWidth", window.innerWidth);
       this.$store.commit(
-        "setColumnsQty",
+        "setGalleryColumnsQty",
         this.$store.state.windowWidth > 1200
           ? 3
           : this.$store.state.windowWidth > 600
           ? 2
           : 1
       );
-    }
+    },
   },
   created() {
     window.onresize = this.windowResize;
     this.windowResize();
-  }
+  },
 };
 </script>
 
@@ -73,6 +70,7 @@ body {
 
 :root {
   --black: #222222ee;
+  --grey: #bbbbbbee;
   --primary: #43aa8b;
   --primary-variant: #254441;
   --secondary: #ff6f59;

@@ -1,13 +1,13 @@
 <template>
-  <section class="gallery-column">
+  <section class="gallery-column" ref="col">
     <img
       class="column__img"
       :class="{'column__img--full-width': $store.state.windowWidth <= 600}"
       v-for="(img, i) in imgsShow"
       :key="i"
       :src="img"
-      alt="img"
       loading="lazy"
+      alt="img"
     />
   </section>
 </template>
@@ -20,25 +20,25 @@ export default {
   components: {},
   props: {
     imgs: Array,
-    col: Number
+    col: Number,
   },
-  data: function() {
+  data: function () {
     return {};
-  },
-  methods: {
-    showOverlay(img) {
-      this.$store.commit("setCurrImg", img);
-      this.$store.commit("setShowOverlay", true);
-    }
   },
   computed: {
     imgsShow() {
       return this.imgs.slice(
         0,
-        this.$store.state.galleryImgsShow / this.$store.state.columnsQty
+        Math.floor(
+          this.$store.state.galleryImgsShow /
+            this.$store.state.galleryColumnsQty
+        )
       );
-    }
-  }
+    },
+    colHeight() {
+      return this.$refs.col.clientHeight;
+    },
+  },
 };
 </script>
 

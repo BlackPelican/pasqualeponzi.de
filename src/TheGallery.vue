@@ -1,10 +1,11 @@
 <template>
   <main class="the-gallery" :class="{'the-gallery--no-padding': $store.state.windowWidth <= 600}">
+    <TheFilter />
     <div class="columns">
       <GalleryColumn
-        v-for="(col, i) in columnsQty"
+        v-for="(col, i) in galleryColumnsQty"
         :key="i"
-        :imgs="imgs.filter((img, index) => (index + ((col - (columnsQty + 1)) * (-1))) % columnsQty == 0)"
+        :imgs="imgs.filter((img, index) => (index + ((col - (galleryColumnsQty + 1)) * (-1))) % galleryColumnsQty == 0)"
         :col="col"
       />
     </div>
@@ -14,6 +15,7 @@
 </template>
 
 <script>
+import TheFilter from "./TheFilter.vue";
 import GalleryColumn from "./GalleryColumn.vue";
 import BaseLoadmore from "./BaseLoadmore.vue";
 import TheTotop from "./TheTotop.vue";
@@ -24,19 +26,22 @@ export default {
     GalleryColumn,
     BaseLoadmore,
     TheTotop,
+    TheFilter,
   },
   data: function () {
     return {};
   },
   computed: {
-    columnsQty() {
-      return this.$store.state.columnsQty;
+    galleryColumnsQty() {
+      return this.$store.state.galleryColumnsQty;
     },
     imgs() {
       const imgs = [];
 
-      for (let i = 1; i <= this.$store.state.galleryImgsMax; i++) {
-        imgs.push(`img/bilder/${i}.jpg`);
+      for (let i = 1; i <= this.$store.getters.foldersCurr.length; i++) {
+        imgs.push(
+          `img/bilder/${this.$store.getters.foldersCurr.name}/${i}.jpg`
+        );
       }
 
       return imgs;

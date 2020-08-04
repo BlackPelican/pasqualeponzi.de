@@ -40,7 +40,8 @@ export default {
   computed: {
     isEnabled() {
       return (
-        this.$store.state.galleryImgsShow < this.$store.state.galleryImgsMax
+        this.$store.state.galleryImgsShow <
+        this.$store.getters.foldersCurr.length
       );
     },
   },
@@ -48,7 +49,7 @@ export default {
     setGalleryImgsMax() {
       this.$store.commit(
         "setGalleryImgsShow",
-        (this.$store.state.galleryImgsShow += this.$store.state.galleryImgsShow)
+        (this.$store.state.galleryImgsShow += 30)
       );
     },
   },
@@ -57,18 +58,16 @@ export default {
 
 <style scoped>
 .base-loadmore {
-  width: 12em;
-  height: 3.5em;
+  padding: 1em;
   background: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.5em;
-  margin: 2em 0;
+  margin: 4vmin 0;
   box-shadow: 0 4px 7px #22222222;
   cursor: pointer;
   transition: all 200ms ease-in-out;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .base-loadmore:hover:not(.base-loadmore--disabled) {
@@ -83,7 +82,7 @@ export default {
   color: var(--on-primary);
   font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: 1.25px;
+  letter-spacing: 1px;
   font-weight: 600;
 }
 
