@@ -40,7 +40,7 @@ export default {
 
       for (let i = 1; i <= this.$store.getters.foldersCurr.length; i++) {
         imgs.push(
-          `img/bilder/${this.$store.getters.foldersCurr.name}/${i}.jpg`
+          `img/bilder/${this.$store.getters.foldersCurr.name}/loaded/${i}.jpg`
         );
       }
 

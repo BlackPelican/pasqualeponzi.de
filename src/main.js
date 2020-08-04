@@ -11,23 +11,28 @@ const store = new Vuex.Store({
     folders: [
       {
         name: "2020",
-        length: 21
+        length: 21,
+        show: 40
       },
       {
         name: "2019-2020",
-        length: 43
+        length: 43,
+        show: 40
       },
       {
         name: "2012-2018",
-        length: 74
+        length: 71,
+        show: 40
       },
       {
         name: "2002-2011",
-        length: 103
+        length: 103,
+        show: 40
       },
       {
         name: "bis 2001",
-        length: 104
+        length: 104,
+        show: 40
       }
     ],
     foldersCurrIndex: 0,
@@ -35,7 +40,6 @@ const store = new Vuex.Store({
     showContact: false,
     showImprint: false,
     galleryColumnsQty: undefined,
-    galleryImgsShow: 30,
     windowWidth: undefined,
   },
   getters: {
@@ -45,7 +49,6 @@ const store = new Vuex.Store({
   },
   mutations: {
     setGalleryImgsMax: (state, max) => state.galleryImgsMax = max,
-    setGalleryImgsShow: (state, show) => state.galleryImgsShow = show,
     setGallerySubPath: (state, path) => state.gallerySubpath = path,
     setShowGallery: (state, show) => state.showGallery = show,
     setShowContact: (state, show) => state.showContact = show,
@@ -53,6 +56,7 @@ const store = new Vuex.Store({
     setGalleryColumnsQty: (state, qty) => state.galleryColumnsQty = qty,
     setWindowWidth: (state, width) => state.windowWidth = width,
     setFoldersCurrIndex: (state, folder) => state.foldersCurrIndex = folder,
+    setFoldersCurrShow: (state, show) => state.folders[state.foldersCurrIndex].show = show,
     hideAll: state => {
       state.showContact = false;
       state.showGallery = false;

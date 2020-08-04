@@ -40,7 +40,7 @@ export default {
   computed: {
     isEnabled() {
       return (
-        this.$store.state.galleryImgsShow <
+        this.$store.getters.foldersCurr.show <
         this.$store.getters.foldersCurr.length
       );
     },
@@ -48,8 +48,8 @@ export default {
   methods: {
     setGalleryImgsMax() {
       this.$store.commit(
-        "setGalleryImgsShow",
-        (this.$store.state.galleryImgsShow += 30)
+        "setFoldersCurrShow",
+        (this.$store.getters.foldersCurr.show += 40)
       );
     },
   },

@@ -10,14 +10,14 @@
 export default {
   name: "TheTotop",
   components: {},
-  data: function() {
+  data: function () {
     return {};
   },
   methods: {
     totop() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-    }
+    },
   },
   computed: {},
   created() {
@@ -31,7 +31,7 @@ export default {
 
       scrollPrev = scrollCurr;
     };
-  }
+  },
 };
 </script>
 
@@ -57,6 +57,13 @@ export default {
 }
 
 .totop__icon {
-  width: 50%;
+  width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+  .the-totop {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
 }
 </style>
