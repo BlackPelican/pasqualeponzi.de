@@ -76,8 +76,6 @@ body {
   --secondary: #ff6f59;
   --secondary-variant: #db504a;
   --background: #f5fbf9;
-  --surface: #ffffff;
-  --error: #b00020;
   --on-primary: #ffffff;
   --on-secondary: #222222ee;
 }
