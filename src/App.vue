@@ -66,6 +66,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 :root {

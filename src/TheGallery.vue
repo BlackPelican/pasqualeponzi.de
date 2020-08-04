@@ -57,6 +57,7 @@ export default {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  transition: all 200ms ease-in-out;
 }
 
 .columns {
