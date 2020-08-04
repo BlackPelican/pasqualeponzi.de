@@ -15,7 +15,7 @@
 export default {
   name: "TheNav",
   components: {},
-  data: function() {
+  data: function () {
     return {};
   },
   methods: {
@@ -26,8 +26,8 @@ export default {
     showContact() {
       this.$store.commit("hideAll");
       this.$store.commit("setShowContact", true);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -65,7 +65,7 @@ export default {
 
 @media screen and (max-width: 600px) {
   .the-nav__link {
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 2em;
   }
 }

@@ -1,9 +1,5 @@
 <template>
-  <button
-    class="base-loadmore"
-    @click="setGalleryImgsMax"
-    :class="{'base-loadmore--disabled': !isEnabled}"
-  >
+  <button class="base-loadmore" @click="setGalleryImgsMax" v-if="isEnabled">
     <svg
       class="base-loadmore__icon"
       version="1.1"

@@ -15,17 +15,17 @@ const store = new Vuex.Store({
         show: 40
       },
       {
-        name: "2019-2020",
+        name: "2019",
         length: 43,
         show: 40
       },
       {
-        name: "2012-2018",
+        name: "2018-2012",
         length: 71,
         show: 40
       },
       {
-        name: "2002-2011",
+        name: "2011-2002",
         length: 103,
         show: 40
       },

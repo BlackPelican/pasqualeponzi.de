@@ -46,6 +46,10 @@ export default {
   margin-bottom: calc(2vmin - 5px);
 }
 
+.base-image:last-child {
+  margin-bottom: calc(4vmin - 5px);
+}
+
 .image {
   width: 100%;
   box-shadow: 0 4px 7px #33333322;
@@ -57,18 +61,12 @@ export default {
   cursor: pointer;
 }
 
-.image:hover:not(.image--placeholder) {
+.image:hover:not(.image--placeholder):not(.image--full-width) {
   transform: scale(1.02);
 }
 
 .image--full-width {
   width: 100%;
   margin-bottom: 1vmin;
-}
-
-@media screen and (max-width: 600px) {
-  .image:hover {
-    transform: none;
-  }
 }
 </style>
