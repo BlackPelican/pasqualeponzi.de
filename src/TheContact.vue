@@ -14,7 +14,6 @@
 </template>
 
 <script>
-//import Ligma from "./Ligma.vue";
 
 export default {
   name: "TheContact",

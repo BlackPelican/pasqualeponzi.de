@@ -19,13 +19,14 @@ export default {
   },
   computed: {
     imgsShow() {
-      return this.imgs.slice(
+      /*return this.imgs.slice(
         0,
         Math.floor(
           this.$store.getters.foldersCurr.show /
             this.$store.state.galleryColumnsQty
         )
-      );
+      );*/
+      return this.imgs;
     },
   },
 };

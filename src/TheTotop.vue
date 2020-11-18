@@ -1,6 +1,20 @@
 <template>
   <div class="the-totop" @click="totop">
-    <img class="totop__icon" src="img/icons/totop.svg" alt="Back" />
+    <svg
+      class="totop__icon"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 512 512"
+      style="enable-background:new 0 0 512 512;"
+      xml:space="preserve"
+    >
+      <g>
+        <polygon points="367.1,0 111.1,256 367.1,512 400.9,478.2 178.7,256 400.9,33.8 367.1,0 	" />
+      </g>
+    </svg>
   </div>
 </template>
 
@@ -37,6 +51,7 @@ export default {
 
 <style scoped>
 .the-totop {
+  transform: rotate(90deg);
   height: 4rem;
   width: 4rem;
   background: var(--background);
@@ -58,6 +73,7 @@ export default {
 
 .totop__icon {
   width: 40%;
+  fill: #222222ee;
 }
 
 @media screen and (max-width: 600px) {

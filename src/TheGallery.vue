@@ -11,10 +11,12 @@
     </div>
     <BaseLoadmore />
     <TheTotop />
+    <TheOverlay v-if="$store.state.showOverlay" :imgCurr="$store.state.imgCurr" />
   </main>
 </template>
 
 <script>
+import TheOverlay from "./TheOverlay.vue";
 import TheFilter from "./TheFilter.vue";
 import GalleryColumn from "./GalleryColumn.vue";
 import BaseLoadmore from "./BaseLoadmore.vue";
@@ -27,6 +29,7 @@ export default {
     BaseLoadmore,
     TheTotop,
     TheFilter,
+    TheOverlay,
   },
   data: function () {
     return {};
@@ -38,9 +41,9 @@ export default {
     imgs() {
       const imgs = [];
 
-      for (let i = 1; i <= this.$store.getters.foldersCurr.length; i++) {
+      for (let i = 1; i <= this.$store.getters.foldersCurr.size; i++) {
         imgs.push(
-          `img/bilder/${this.$store.getters.foldersCurr.name}/loaded/${i}.jpg`
+          `img/bilder/400px/jpg/${this.$store.getters.foldersCurr.name}/loaded/${i}.jpg`
         );
       }
 

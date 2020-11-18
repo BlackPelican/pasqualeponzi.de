@@ -3,7 +3,7 @@
     <img src="img/logo-black.svg" alt="Logo" class="logo" />
     <ul class="the-nav__list">
       <li class="the-nav__link" @click="showGallery">Galerie</li>
-      <li class="the-nav__link">About</li>
+      <li class="the-nav__link" @click="showAbout">About</li>
       <li class="the-nav__link" @click="showContact">Kontakt</li>
     </ul>
   </nav>
@@ -27,6 +27,10 @@ export default {
       this.$store.commit("hideAll");
       this.$store.commit("setShowContact", true);
     },
+    showAbout() {
+      this.$store.commit("hideAll");
+      this.$store.commit("setShowAbout", true);
+    }
   },
 };
 </script>

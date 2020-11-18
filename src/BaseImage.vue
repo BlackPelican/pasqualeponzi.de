@@ -7,6 +7,7 @@
       :src="img"
       alt="img"
       @load="loaded"
+      @click="showOverlay"
     />
     <img
       v-show="!hasLoaded"
@@ -33,6 +34,18 @@ export default {
   methods: {
     loaded() {
       this.hasLoaded = true;
+    },
+    showOverlay() {
+      if(this.$store.state.windowWidth > 1200) {
+        const imgSplit = this.img.split("/");
+      const n = imgSplit[imgSplit.length - 1].split(".")[0];
+
+      this.$store.commit(
+        "setImgCurr",
+        `img/bilder/1000px/jpg/${this.$store.getters.foldersCurr.name}/${n}.jpg`
+      );
+      this.$store.commit("setShowOverlay", true);
+      }
     },
   },
   watch: {},
@@ -62,7 +75,7 @@ export default {
 }
 
 .image:hover:not(.image--placeholder):not(.image--full-width) {
-  transform: scale(1.02);
+  transform: scale(0.99);
 }
 
 .image--full-width {

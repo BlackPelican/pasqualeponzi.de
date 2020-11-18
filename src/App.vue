@@ -2,6 +2,7 @@
   <div id="app">
     <TheNav />
     <TheGallery v-if="$store.state.showGallery" />
+    <TheAbout v-if="$store.state.showAbout" />
     <TheContact v-if="$store.state.showContact" />
     <TheImprint v-if="$store.state.showImprint" />
     <TheFooter />
@@ -14,6 +15,7 @@ import TheGallery from "./TheGallery.vue";
 import TheFooter from "./TheFooter.vue";
 import TheContact from "./TheContact.vue";
 import TheImprint from "./TheImprint.vue";
+import TheAbout from "./TheAbout.vue";
 
 export default {
   name: "App",
@@ -23,6 +25,7 @@ export default {
     TheFooter,
     TheContact,
     TheImprint,
+    TheAbout
   },
   methods: {
     windowResize() {

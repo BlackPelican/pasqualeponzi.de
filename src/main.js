@@ -11,35 +11,38 @@ const store = new Vuex.Store({
     folders: [
       {
         name: "2020",
-        length: 21,
-        show: 40
+        size: 20,
+        show: 20
       },
       {
         name: "2019",
-        length: 43,
-        show: 40
+        size: 43,
+        show: 43
       },
       {
         name: "2018-2012",
-        length: 71,
+        size: 67,
         show: 40
       },
       {
         name: "2011-2002",
-        length: 103,
+        size: 100,
         show: 40
       },
       {
         name: "bis 2001",
-        length: 104,
-        show: 40
+        size: 81,
+        show: 41
       }
     ],
     foldersCurrIndex: 0,
-    showGallery: true,
+    showGallery: false,
     showContact: false,
     showImprint: false,
+    showOverlay: false,
+    showAbout: true,
     galleryColumnsQty: undefined,
+    imgCurr: null,
     windowWidth: undefined,
   },
   getters: {
@@ -51,16 +54,20 @@ const store = new Vuex.Store({
     setGalleryImgsMax: (state, max) => state.galleryImgsMax = max,
     setGallerySubPath: (state, path) => state.gallerySubpath = path,
     setShowGallery: (state, show) => state.showGallery = show,
+    setShowAbout: (state, show) => state.showAbout = show,
     setShowContact: (state, show) => state.showContact = show,
     setShowImprint: (state, show) => state.showImprint = show,
+    setShowOverlay: (state, show) => state.showOverlay = show,
     setGalleryColumnsQty: (state, qty) => state.galleryColumnsQty = qty,
     setWindowWidth: (state, width) => state.windowWidth = width,
     setFoldersCurrIndex: (state, folder) => state.foldersCurrIndex = folder,
     setFoldersCurrShow: (state, show) => state.folders[state.foldersCurrIndex].show = show,
+    setImgCurr: (state, img) => state.imgCurr = img,
     hideAll: state => {
       state.showContact = false;
       state.showGallery = false;
       state.showImprint = false;
+      state.showAbout = false;
     }
   }
 });

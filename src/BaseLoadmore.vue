@@ -1,26 +1,27 @@
 <template>
   <button class="base-loadmore" @click="setGalleryImgsMax" v-if="isEnabled">
     <svg
-      class="base-loadmore__icon"
       version="1.1"
+      class="loadmore__icon"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
-      viewBox="0 0 512 512"
-      style="enable-background:new 0 0 512 512;"
+      viewBox="0 0 341.4 341.4"
+      style="enable-background:new 0 0 341.4 341.4;"
       xml:space="preserve"
     >
       <g>
         <g>
-          <path
-            d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
-			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"
+          <polygon
+            points="192,149.4 192,0 149.4,0 149.4,149.4 0,149.4 0,192 149.4,192 149.4,341.4 192,341.4 192,192 341.4,192 
+			341.4,149.4 		"
           />
         </g>
       </g>
     </svg>
-    <span class="base-loadmore__text">Mehr laden</span>
+
+    <span class="loadmore__text">Mehr laden</span>
   </button>
 </template>
 
@@ -37,7 +38,7 @@ export default {
     isEnabled() {
       return (
         this.$store.getters.foldersCurr.show <
-        this.$store.getters.foldersCurr.length
+        this.$store.getters.foldersCurr.size
       );
     },
   },
@@ -74,7 +75,7 @@ export default {
   transform: translateY(-4px);
 }
 
-.base-loadmore__text {
+.loadmore__text {
   color: var(--on-primary);
   font-size: 1em;
   text-transform: uppercase;
@@ -82,24 +83,11 @@ export default {
   font-weight: 600;
 }
 
-.base-loadmore__icon {
+.loadmore__icon {
   height: 1.5em;
+  width: 1.5em;
   margin-right: 1em;
   fill: #fff;
-}
-
-.base-loadmore--disabled {
-  background: #ccc;
-  box-shadow: none;
-  cursor: default;
-}
-
-.base-loadmore--disabled .base-loadmore__text {
-  color: #888;
-}
-
-.base-loadmore--disabled .base-loadmore__icon {
-  fill: #888;
 }
 
 @media screen and (max-width: 600px) {
