@@ -36,11 +36,11 @@ const store = new Vuex.Store({
       }
     ],
     foldersCurrIndex: 0,
-    showGallery: false,
+    showGallery: true,
     showContact: false,
     showImprint: false,
     showOverlay: false,
-    showAbout: true,
+    showAbout: false,
     galleryColumnsQty: undefined,
     imgCurr: null,
     windowWidth: undefined,
